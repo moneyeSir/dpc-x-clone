@@ -13,6 +13,7 @@
 
     <!-- Icon Resources -->
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- Scripts -->
     <script src="../src/utils/index.js"></script>
@@ -50,9 +51,48 @@
             <ul class="menu-services-list menu-settings-container" id="menu-settings-list"></ul>
 
         </section>
-        <main class="main-section-area"></main>
-    </div>
+        <main class="main-section-area">
+            <div class="main-section-sticky-header main-section-header">
+                <div class="main-section-app-bar">
+                    <div class="leading-app-bar">
+                        <h2>M-PESA</h2>
+                        <div class="input-search-container">
+                            <i class="iconify" data-icon="akar-icons:search"></i>
+                            <input type="search" placeholder="Tap to search transactions">
+                        </div>
+                    </div>
 
+                    <div class="trailing-app-bar">
+                        <div class="select-company-container">
+                            <select name="companies" id="companies-select-options"></select>
+                            <div id="selected-company" class="selected-company-container">
+                                <h6>Surv Technologies</h6>
+                                <i class="iconify" data-icon="akar-icons:chevron-down"></i>
+                            </div>
+                            <ul class="companies-select-list hide-companies-list">
+                                <li>Surv Technologies</li>
+                                <li>Surv Technologies</li>
+                                <li>Surv Technologies</li>
+                            </ul>
+                        </div>
+                        <div class="main-section-notification-icon">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                                </svg></i>
+                            <p>10</p>
+                        </div>
+                    </div>
+
+                </div>
+                <nav class="main-section-tab-bar">
+                    <ul class="tabs-list" id="tabs-list"></ul>
+                </nav>
+            </div>
+            <table></table>
+        </main>
+    </div>
 </body>
 
 </html>
