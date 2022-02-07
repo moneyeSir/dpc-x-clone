@@ -8,7 +8,7 @@
     --menuItemHoverColor: rgba(235, 236, 240, 1);
     --primaryTextColor: rgba(50, 59, 75, 1);
     --secondaryTextColor: rgba(138, 148, 166, 1);
-    --dividerColor: rgba(0,0,0,0.2);
+    --dividerColor: rgba(0,0,0,0.1);
     --cardColor: #FFFFFF;
 
     /** Sizes */
@@ -444,16 +444,17 @@ table {
     margin: 0 var(--horizontalGap);
     background-color: var(--cardColor);
     border-radius: var(--borderRadius);
-    box-shadow: 1px 5px 10px 0px rgba(21, 34, 67, 0.2);
+    box-shadow: 1px 5px 10px 1px rgba(21, 34, 67, 0.2);
 }
 
 table:last-child {
-    border: 1px solid transparent;
+    border: 0 solid transparent;
 }
 
 tr {
     border-bottom: 1px solid var(--dividerColor);
     display: flex;
+    align-items: center;
 }
 
 th,td {
@@ -471,6 +472,8 @@ td {
 .table-head-row {
     background-color: var(--selectedMenuItemColor);
     padding: 0 var(--horizontalGap);
+    border-start-start-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
 }
 
 

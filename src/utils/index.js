@@ -185,7 +185,6 @@ const _loadTransactions = (transactions_list) => {
         }
         tables[0].append(table_head);
 
-
         /// Load all transactions to the first table.
         for(let i = 0; i < transactions_list.length; i++){
             let tr = document.createElement("tr");
@@ -210,12 +209,17 @@ const _loadTransactions = (transactions_list) => {
             trx_time.textContent = transactions_list[i].trx_time;
 
             tr.append(name, amount, org_balance, mpesa_trx, phone, acc_no, src, src_paybill, trx_time);
+
+            /// Remove border-bottom from the last row.
+            if(i + 1 === transactions_list.length){
+                tr.style.borderBottom = "none";
+            }
+
+            /// Add the [tr] to the [table]
             tables[0].append(tr);
         }
     }
 }
-
-
 
 
 // Demo Data
@@ -317,19 +321,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    
-    {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -340,7 +332,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -351,7 +343,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -362,7 +354,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -373,7 +365,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -384,7 +376,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -395,7 +387,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -406,7 +398,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
@@ -417,130 +409,7 @@ const _transactions_list = [
         trx_time: "12/12/2020 10:11:12",
     },
     {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
-        amount: "Ksh. 1000",
-        org_balance: "Ksh. 1000",
-        mpesa_trx: "QB42LXC40O2",
-        phone: "2547320048843",
-        acc_no: "WHMCS_3108",
-        src_paybill: "531920",
-        src: "M-Pesa",
-        trx_time: "12/12/2020 10:11:12",
-    },
-    {
-        name: "Customer Name",
+        name: "Customer Looooong",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
