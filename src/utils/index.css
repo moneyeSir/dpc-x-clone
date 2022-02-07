@@ -71,6 +71,7 @@ body { background-color: var(--bodyBackgroundColor); overflow: hidden;}
     flex-direction: column;
     gap: var(--verticalGap);
     overflow-y: scroll;
+    position: relative;
 }
 
 .menu--items-container {
@@ -83,6 +84,7 @@ body { background-color: var(--bodyBackgroundColor); overflow: hidden;}
     display: flex;
     align-items: center;
     gap: var(--horizontalGap);
+    cursor: pointer;
 }
 
 .dpc-logo-name img {
@@ -146,15 +148,22 @@ body { background-color: var(--bodyBackgroundColor); overflow: hidden;}
     display: flex;
     align-items: center;
     gap: var(--horizontalGap);
+    cursor: pointer;
 }
 
-.menu-service-item:hover {
-    background-color: var(--menuItemHoverColor);
+.menu-service-item i {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
 }
 
 .menu-service-item  h5{
     font-weight: 500;
     flex: 2;
+}
+
+.menu-service-item:hover, .menu-icons-only:hover {
+    background-color: var(--menuItemHoverColor);
 }
 
 .menu-item-notification {
@@ -191,6 +200,25 @@ body { background-color: var(--bodyBackgroundColor); overflow: hidden;}
     background-color: var(--selectedMenuItemColor);
     border-radius: var(--borderRadius);
 } 
+
+/** Responsive Menu Icons*/
+.menu-icons-only {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.on-menu-items-hover {
+    display: flex;
+}
+
+.on-menu-items-hover-end {
+    display: none;
+}
 
 /** Menu Section Area --END*/
 
@@ -456,23 +484,23 @@ td {
     .menu-section-area {
         padding-left: 10px;
         padding-right: 10px;
+        overflow: visible;
     }
 
-    .dpc-logo-name h2, .active-company-card h2, .company-name-col, .active-company-card i, .menu-service-item  h5, .menu-item-notification{
-        display: none;  /* Hide the text on small screens */
-    }
-
-    .dpc-logo-name, .active-company-card, .menu-service-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+    /** Hide the wrapper div */
+    .menu-service-item,  .dpc-logo-name h2, .active-company-card div, .active-company-card i {
+        display: none;
     }
 
     .menu-settings-container {
         padding: 0;
         background-color: transparent;
     }
+
+    /** Show the icons only */
+    .menu-icons-only, .dpc-logo-name {
+        display: flex;
+        justify-content: center;
+    }
+    
 }

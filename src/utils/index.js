@@ -35,20 +35,25 @@ const _loadMenuServices = (menuItems) => {
 
         /// Create a new li element.
         let li = document.createElement("li");
-        li.classList.add(...["menu--items-container", "menu-service-item"]);
+        // li.classList.add(...["menu--items-container", "menu-service-item"]);
+
+        /// Create a wrapper div that will show all the items on large screens.
+        /// And act as an overlay for small screens.
+        let wrapper = document.createElement("div");
+        wrapper.classList.add(...["menu--items-container", "menu-service-item"]);
+        li.append(wrapper);
+
+        /// Create a new div that will hold the icon only.
+        let icon_div = document.createElement("div");
+        icon_div.classList.add("menu-icons-only")
+        li.append(icon_div);
 
         /// Check if the service is selected.
         /// If so, Add the selected class to the li element.
         if (menuItems[i].selected) {
-            li.classList.add("menu-selected-service");
+            wrapper.classList.add("menu-selected-service");
+            icon_div.classList.add("menu-selected-service");
         }
-
-        /// Add the icon.
-        let icon = document.createElement("i");
-        let span = document.createElement("span");
-        span.classList.add("iconify");
-        span.setAttribute("data-icon", menuItems[i].icon);
-        icon.append(span);
 
         /// Add the text.
         let text = document.createElement("h5");
@@ -63,15 +68,21 @@ const _loadMenuServices = (menuItems) => {
             count_text.textContent = menuItems[i].count;
             count.append(count_text);
 
-            /// Add all items to [li]
-            li.append(icon, text, count);
+            /// Add all items to [wrapper]
+            wrapper.append(_genrateIcon(menuItems[i].icon), text, count);
         }
 
         /// If the service has only one count or less count,
-        /// add only the icon and text to [li].
+        /// add only the icon and text to [wrapper].
         else {
-            li.append(icon, text);
+            wrapper.append(_genrateIcon(menuItems[i].icon), text);
         }
+
+        /// Add the icon to the icon div
+        icon_div.append(_genrateIcon(menuItems[i].icon));
+
+        li.setAttribute("onmouseover", "onShowOverlay(this)");
+        li.setAttribute("onmouseout", "onHideOverlay(this)");
 
         /// Add the [li] to the [ul]
         if(menuItems[i].type === "service"){
@@ -81,6 +92,40 @@ const _loadMenuServices = (menuItems) => {
         }
     }
 };
+
+const _genrateIcon = (data_icon) => {
+    let icon = document.createElement("i");
+    let span = document.createElement("span");
+    span.classList.add("iconify");
+    span.setAttribute("data-icon",data_icon);
+    icon.append(span);
+    return icon;
+}
+
+
+// TODO: HOVER EFFECT ON THE MENU ITEMS
+function onShowOverlay(elmnt) {
+    // alert(`"overlay" ${elmnt.parentElement.children[1]}`)
+    // if(elmnt.children[1].style.display !== "none"){
+    //     let wrapper_style = elmnt.children[0].style;
+    //     wrapper_style.display = "flex";
+    //     wrapper_style.position = 'absolute';
+    //     wrapper_style.backgroundColor = 'var(--menuItemHoverColor)';
+    //     wrapper_style.zIndex = '9';
+    //     wrapper_style.minWidth = "100px";
+    // }
+}
+
+function onHideOverlay(elmnt) {
+    // if(elmnt.children[1].style.display !== "none"){
+    //     let wrapper_style = elmnt.children[0].style;
+    //     wrapper_style.display = "none";
+    //     wrapper_style.position = 'relative';
+    //     wrapper_style.backgroundColor = 'var(--menuItemHoverColor)';
+    //     wrapper_style.zIndex = '0';
+    //     wrapper_style.minWidth = "10px";
+    // }
+}
 
 const _loadTabItems = (tabs_list) => {
     let tabs = document.getElementById("tabs-list");
@@ -124,10 +169,6 @@ const _loadTabItems = (tabs_list) => {
 
 const _loadTransactions = (transactions_list) => {
     let tables = document.getElementsByTagName("table");
-
-    console.log(tables.length);
-    console.log(Object.keys(transactions_list[0]));
-
     
     if(tables.length && transactions_list.length){
 
