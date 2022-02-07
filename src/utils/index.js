@@ -225,7 +225,7 @@ const _menu_items = [
         icon: "fa-solid:hands-helping",
         name: "Assistant",
         count: 3,
-        selected: true,
+        selected: false,
         type: "setting"
     },
     {   
@@ -265,7 +265,7 @@ const _tab_items = [
 
 const _transactions_list = [
     {
-        name: "Customer Name",
+        name: "Customer Looooong Nameeeee",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",
