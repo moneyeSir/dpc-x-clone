@@ -25,7 +25,6 @@
     padding: 0;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 14px;
-    overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,i { color: var(--primaryTextColor);}
@@ -51,11 +50,10 @@ input:focus {
     outline: none;
 }
 
-body { background-color: var(--bodyBackgroundColor);}
+body { background-color: var(--bodyBackgroundColor); overflow: hidden;}
 
 .wrapper {
     width: 100vw;
-    min-height: 100vh;
     display: grid;
     grid-template-columns: var(--menuWidth) 1fr;
     grid-template-areas: 'menu-area main-content-area';
@@ -66,7 +64,8 @@ body { background-color: var(--bodyBackgroundColor);}
     grid-area: menu-area;
     background-color: var(--menuBackgroundColor);
     height: 100vh;
-    padding: 20px 10px 0 20px;
+    width: 100%;
+    padding: var(--verticalGap) var(--horizontalGap);
     display: flex;
     flex-direction: column;
     gap: var(--verticalGap);
@@ -197,11 +196,11 @@ body { background-color: var(--bodyBackgroundColor);}
 .main-section-area {
     grid-area: main-content-area;
     background-color: var(--bodyBackgroundColor);
-    /* max-height: 100vh; */
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     gap: calc(var(--verticalGap) + var(--horizontalGap));
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .main-section-sticky-header {
@@ -218,6 +217,7 @@ body { background-color: var(--bodyBackgroundColor);}
     display: flex;
     flex-direction: column;
     gap: var(--horizontalGap);
+    background-color: var(--bodyBackgroundColor);
 }
 
 .main-section-app-bar {
@@ -359,6 +359,7 @@ body { background-color: var(--bodyBackgroundColor);}
 .main-section-tab-bar {
     padding: 0 var(--verticalGap);
     width: 100%;
+    margin-bottom: var(--horizontalGap);
 }
 
 .tabs-list {
@@ -367,7 +368,6 @@ body { background-color: var(--bodyBackgroundColor);}
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    overflow-x: scroll; 
 }
 
 .tabs-list::-webkit-scrollbar {
