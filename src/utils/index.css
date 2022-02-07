@@ -424,12 +424,14 @@ table:last-child {
 
 tr {
     border-bottom: 1px solid var(--dividerColor);
+    display: flex;
 }
 
 th,td {
     font-weight: 500;
     padding: var(--horizontalGap) 0;
     text-align: center;
+    flex: 1;
 }
 
 td {

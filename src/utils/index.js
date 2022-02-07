@@ -177,10 +177,6 @@ const _loadTransactions = (transactions_list) => {
 
 
 
-
-
-
-
 // Demo Data
 const _menu_items = [
     {   
@@ -277,7 +273,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -288,7 +284,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     
     {
@@ -300,7 +296,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -311,7 +307,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -322,7 +318,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -333,7 +329,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -344,7 +340,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -355,7 +351,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -366,7 +362,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -377,7 +373,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -388,7 +384,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
 
     {
@@ -400,7 +396,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -411,7 +407,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     
     {
@@ -423,7 +419,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -434,7 +430,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -445,7 +441,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -456,7 +452,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -467,7 +463,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -478,7 +474,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -489,7 +485,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -500,7 +496,7 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
     {
         name: "Customer Name",
@@ -511,6 +507,6 @@ const _transactions_list = [
         acc_no: "WHMCS_3108",
         src_paybill: "531920",
         src: "M-Pesa",
-        date: "12/12/2020 10:11:12",
+        trx_time: "12/12/2020 10:11:12",
     },
 ]
