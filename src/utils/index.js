@@ -179,7 +179,7 @@ const _loadTransactions = (transactions_list) => {
 
         for(let i = 0; i < transaction_keys.length; i++){
             let th = document.createElement("th");
-            let text = `${transaction_keys[i]}`;
+            let text = `${transaction_keys[i].replace("_"," ")}`;
             th.textContent = text.charAt(0).toUpperCase() + text.slice(1);
             table_head.appendChild(th);
         }
