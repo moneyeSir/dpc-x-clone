@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     _loadTransactions(_transactions_list);
 })
 
+const onMenuIconClick = (e) => {
+    let menu_section = document.getElementsByClassName("menu-section-area")[0];  
+    menu_section.classList.toggle("open-menu-section-area");
+    console.log(menu_section.classList);
+}
+
 
 const _loadSelectedCompanyProfile = () => {
     /// Load the profile image.
@@ -151,19 +157,22 @@ const _loadTransactions = (transactions_list) => {
     if (tables.length && transactions_list.length) {
 
         /// Add the transaction keys as heads to the table.
-        let table_head = document.createElement("tr");
-        table_head.classList.add("table-head-row");
+        let table_head_row = document.createElement("tr");
+        table_head_row.classList.add("table-head-row");
         let transaction_keys = Object.keys(transactions_list[0]);
 
         for (let i = 0; i < transaction_keys.length; i++) {
             let th = document.createElement("th");
             let text = `${transaction_keys[i].replace("_", " ")}`;
             th.textContent = text.charAt(0).toUpperCase() + text.slice(1);
-            table_head.appendChild(th);
+            table_head_row.appendChild(th);
         }
-        tables[0].append(table_head);
+        let thead = tables[0].getElementsByTagName("thead")[0];
+        thead.appendChild(table_head_row);
+        tables[0].append(thead);
 
         /// Load all transactions to the first table.
+        let tbody = tables[0].getElementsByTagName("tbody")[0];
         for (let i = 0; i < transactions_list.length; i++) {
             let tr = document.createElement("tr");
             let name = document.createElement("td");
@@ -194,8 +203,11 @@ const _loadTransactions = (transactions_list) => {
             }
 
             /// Add the [tr] to the [table]
-            tables[0].append(tr);
+            tbody.append(tr);
         }
+
+        console.log(tbody.children.length);
+        tables[0].append(tbody);
     }
 }
 
@@ -377,6 +389,128 @@ const _transactions_list = [
     },
     {
         name: "Customer Looooong Nameeeee",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
+        amount: "Ksh. 1000",
+        org_balance: "Ksh. 1000",
+        mpesa_trx: "QB42LXC40O2",
+        phone: "2547320048843",
+        acc_no: "WHMCS_3108",
+        src_paybill: "531920",
+        src: "M-Pesa",
+        trx_time: "12/12/2020 10:11:12",
+    },
+    {
+        name: "Customer Looooong",
         amount: "Ksh. 1000",
         org_balance: "Ksh. 1000",
         mpesa_trx: "QB42LXC40O2",

@@ -22,9 +22,9 @@
     <title>DPC-X</title>
 </head>
 
-<body class="wrapper">
+<body>
 
-    <!-- <div class="wrapper"> -->
+    <div class="body-wrapper">
         <section class="menu-section-area">
 
             <!-- Site's Logo And Name-->
@@ -61,6 +61,7 @@
             <div class="main-section-sticky-header main-section-header">
                 <div class="main-section-app-bar">
                     <div class="leading-app-bar">
+                        <img src="../src/assets/dpc-menu.png" alt="Menu Icon" id="toggle-menu-icon" onclick="onMenuIconClick()">
                         <h2>M-PESA</h2>
                         <div class="input-search-container">
                             <i class="iconify" data-icon="akar-icons:search"></i>
@@ -96,9 +97,60 @@
                     <ul class="tabs-list" id="tabs-list"></ul>
                 </nav>
             </div>
-            <table></table>
+            <div class="table-wrapper">
+                <table>
+                    <thead></thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="table-pagination">
+                            <td id="pagination-info">
+                                <p>Showing 1-10 of 100</p>
+                            </td>
+                            <td class="pagination-controls">
+                                <button class="pagination-controls-button" id="pagination-controls-first">
+                                    <i class="iconify" data-icon="fa-solid:chevron-left"></i>
+                                    <i class="iconify" data-icon="fa-solid:chevron-left"></i>
+                                </button>
+                                <button class="pagination-controls-button" id="pagination-controls-previous">
+                                    <i class="iconify" data-icon="fa-solid:chevron-left"></i>
+                                </button>
+                                <ul class="pagination-page-index">
+                                    <li>
+                                        <button class="pagination-controls-button">
+                                            <p>1</p>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="pagination-controls-button">
+                                            <p>2</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <button class="pagination-controls-button" id="pagination-controls-next">
+                                    <i class="iconify" data-icon="fa-solid:chevron-right"></i>
+                                </button>
+                                <button class="pagination-controls-button" id="pagination-controls-last">
+                                    <i class="iconify" data-icon="fa-solid:chevron-right"></i>
+                                    <i class="iconify" data-icon="fa-solid:chevron-right"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </main>
-    <!-- </div> -->
+    </div>
+
+    <footer>
+        <p>Version 2.0.22</p>
+        <a href="https://survtechnologies.co.ke" target="_blank">Powered by Survtechnologies ©</a>
+        <div>
+            <a href="">Contact Us</a>
+            <a href="">About</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms Of Use</a>
+        </div>
+    </footer>
 </body>
 
 </html>
