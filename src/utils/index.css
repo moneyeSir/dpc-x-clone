@@ -541,6 +541,12 @@ tbody {
   width: 100%;
 }
 
+tbody > tr, thead > tr {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 tbody > tr {
   border-bottom: 1px solid var(--dividerColor);
 }
@@ -549,9 +555,13 @@ tbody>tr:last-child {
   border-bottom: none;
 }
 
-tr {
-  display: flex;
-  align-items: center;
+tbody > tr:hover {
+  z-index: 9;
+  box-shadow: 0 2px 6px 1px rgba(21, 34, 67, 0.2);
+  border: none;
+  transform: translateY(-50%);
+  transform: scale(1.01);
+  background-color: var(--cardColor);
 }
 
 th,
