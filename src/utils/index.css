@@ -634,6 +634,7 @@ tfoot > tr > td {
   .menu-section-area {
     padding-left: 10px;
     padding-right: 10px;
+    overflow: visible;
   }
 
   /** Hide the wrapper div */
