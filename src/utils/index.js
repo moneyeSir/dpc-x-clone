@@ -21,6 +21,10 @@ const _loadSelectedCompanyProfile = () => {
     profile_image.setAttribute("src", "../src/assets/qq.png");
     profile_image.setAttribute("alt", "Twiga Foods");
 
+    let contractedImageView = document.getElementById("menu-company-profile-image-contracted");
+    contractedImageView.setAttribute("src", "../src/assets/qq.png");
+    contractedImageView.setAttribute("alt", "Twiga Foods");
+
     /// Load the company name.
     let company_col = document.getElementById("menu-company-profile-details");
     company_col.children[0].textContent = "SurvTechnologies";
@@ -35,6 +39,7 @@ const _loadMenuServices = (menuItems) => {
 
         /// Create a new li element.
         let li = document.createElement("li");
+        li.classList.add("menu-item-wrapper");
         // li.classList.add(...["menu--items-container", "menu-service-item"]);
 
         /// Create a wrapper div that will show all the items on large screens.
@@ -81,13 +86,10 @@ const _loadMenuServices = (menuItems) => {
         /// Add the icon to the icon div
         icon_div.append(_genrateIcon(menuItems[i].icon));
 
-        li.setAttribute("onmouseover", "onShowOverlay(this)");
-        li.setAttribute("onmouseout", "onHideOverlay(this)");
-
         /// Add the [li] to the [ul]
-        if(menuItems[i].type === "service"){
+        if (menuItems[i].type === "service") {
             service_list.appendChild(li);
-        }else {
+        } else {
             settings_list.appendChild(li);
         }
     }
@@ -97,52 +99,28 @@ const _genrateIcon = (data_icon) => {
     let icon = document.createElement("i");
     let span = document.createElement("span");
     span.classList.add("iconify");
-    span.setAttribute("data-icon",data_icon);
+    span.setAttribute("data-icon", data_icon);
     icon.append(span);
     return icon;
 }
 
 
-// TODO: HOVER EFFECT ON THE MENU ITEMS
-function onShowOverlay(elmnt) {
-    // alert(`"overlay" ${elmnt.parentElement.children[1]}`)
-    // if(elmnt.children[1].style.display !== "none"){
-    //     let wrapper_style = elmnt.children[0].style;
-    //     wrapper_style.display = "flex";
-    //     wrapper_style.position = 'absolute';
-    //     wrapper_style.backgroundColor = 'var(--menuItemHoverColor)';
-    //     wrapper_style.zIndex = '9';
-    //     wrapper_style.minWidth = "100px";
-    // }
-}
-
-function onHideOverlay(elmnt) {
-    // if(elmnt.children[1].style.display !== "none"){
-    //     let wrapper_style = elmnt.children[0].style;
-    //     wrapper_style.display = "none";
-    //     wrapper_style.position = 'relative';
-    //     wrapper_style.backgroundColor = 'var(--menuItemHoverColor)';
-    //     wrapper_style.zIndex = '0';
-    //     wrapper_style.minWidth = "10px";
-    // }
-}
-
 const _loadTabItems = (tabs_list) => {
     let tabs = document.getElementById("tabs-list");
-    
+
     /// Check if the tabs list is not empty.
     /// If it is not, load the tabs.
-    if(tabs_list.length){
+    if (tabs_list.length) {
         for (let i = 0; i < tabs_list.length; i++) {
             /// Create a new li element.
             let li = document.createElement("li");
             li.classList.add("tab-item");
 
-            if(i === 0) {
+            if (i === 0) {
                 li.classList.add("first-tab-item");
             }
 
-            if(i + 1 === tabs_list.length) {
+            if (i + 1 === tabs_list.length) {
                 li.classList.add("last-tab-item");
             }
 
@@ -169,24 +147,24 @@ const _loadTabItems = (tabs_list) => {
 
 const _loadTransactions = (transactions_list) => {
     let tables = document.getElementsByTagName("table");
-    
-    if(tables.length && transactions_list.length){
+
+    if (tables.length && transactions_list.length) {
 
         /// Add the transaction keys as heads to the table.
         let table_head = document.createElement("tr");
         table_head.classList.add("table-head-row");
         let transaction_keys = Object.keys(transactions_list[0]);
 
-        for(let i = 0; i < transaction_keys.length; i++){
+        for (let i = 0; i < transaction_keys.length; i++) {
             let th = document.createElement("th");
-            let text = `${transaction_keys[i].replace("_"," ")}`;
+            let text = `${transaction_keys[i].replace("_", " ")}`;
             th.textContent = text.charAt(0).toUpperCase() + text.slice(1);
             table_head.appendChild(th);
         }
         tables[0].append(table_head);
 
         /// Load all transactions to the first table.
-        for(let i = 0; i < transactions_list.length; i++){
+        for (let i = 0; i < transactions_list.length; i++) {
             let tr = document.createElement("tr");
             let name = document.createElement("td");
             let amount = document.createElement("td");
@@ -211,7 +189,7 @@ const _loadTransactions = (transactions_list) => {
             tr.append(name, amount, org_balance, mpesa_trx, phone, acc_no, src, src_paybill, trx_time);
 
             /// Remove border-bottom from the last row.
-            if(i + 1 === transactions_list.length){
+            if (i + 1 === transactions_list.length) {
                 tr.style.borderBottom = "none";
             }
 
@@ -224,56 +202,56 @@ const _loadTransactions = (transactions_list) => {
 
 // Demo Data
 const _menu_items = [
-    {   
+    {
         icon: "bx:bx-bar-chart-alt-2",
         name: "Dashboard",
         count: 0,
         selected: false,
         type: "service"
     },
-    {   
+    {
         icon: "mdi:cash-multiple",
         name: "M-Pesa",
         count: 6,
         selected: true,
         type: "service"
     },
-    {   
+    {
         icon: "ic:outline-sms",
         name: "Africa's Talking",
         count: 0,
         selected: false,
         type: "service"
     },
-    {   
+    {
         icon: "bi:code",
         name: "Kopo Kopo",
         count: 0,
         selected: false,
         type: "service"
     },
-    {   
+    {
         icon: "bi:clipboard-data",
         name: "Reports",
         count: 2,
         selected: false,
         type: "service"
     },
-    {   
+    {
         icon: "bi:gear-wide-connected",
         name: "System Settings",
         count: 2,
         selected: false,
         type: "setting"
     },
-    {   
+    {
         icon: "fa-solid:hands-helping",
         name: "Assistant",
         count: 3,
         selected: false,
         type: "setting"
     },
-    {   
+    {
         icon: "iconoir:log-out",
         name: "Log out",
         selected: false,
