@@ -168,13 +168,11 @@ footer > a:hover {
 .active-company-wrapper:hover > .active-company-card,
 .active-company-wrapper:hover > .contracted-company-card {
   box-shadow: 0 2px 10px rgba(32, 56, 117, 0.2);
-  color: var(--bodyBackgroundColor);
 }
 
 .active-company-card,
 .contracted-company-card {
   background-color: var(--selectedMenuItemColor);
-  color: var(--bodyBackgroundColor);
   display: flex;
   align-items: center;
   gap: 10px;
