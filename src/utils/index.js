@@ -135,7 +135,7 @@ const _loadTabItems = (tabs_list) => {
 
             /// Check if the tab is selected.
             /// If so, Add the selected class to the li element.
-            if (tabs_list[i].selected) {
+            if (tabs_list[i].selected || tabs_list.length === 1) {
                 linearTab.classList.add("selected-linear-tab");
                 li.classList.add("selected-tab-item");
             }
