@@ -113,12 +113,15 @@ const _genrateIcon = (data_icon) => {
 
 const _loadTabItems = (tabs_list) => {
     let tabs = document.getElementById("tabs-list");
+    let linearTabs = document.getElementById("linear-tabs");
 
     /// Check if the tabs list is not empty.
     /// If it is not, load the tabs.
     if (tabs_list.length) {
         for (let i = 0; i < tabs_list.length; i++) {
-            /// Create a new li element.
+            /// Create new [li] elements for [tabs] and [linear] tabs.
+            let linearTab = document.createElement("li");
+
             let li = document.createElement("li");
             li.classList.add("tab-item");
 
@@ -133,19 +136,26 @@ const _loadTabItems = (tabs_list) => {
             /// Check if the tab is selected.
             /// If so, Add the selected class to the li element.
             if (tabs_list[i].selected) {
+                linearTab.classList.add("selected-linear-tab");
                 li.classList.add("selected-tab-item");
             }
 
             /// Add the text.
+            linearTab.textContent = tabs_list[i].name;
             li.textContent = tabs_list[i].name;
 
             /// Add the [li] to the [ul]
+            linearTabs.append(linearTab);
             tabs.appendChild(li);
         }
+
+        /// Hide one of the two tabs that you dont want to show.
+        tabs.style.display = "none";
     }
 
     /// Hide the tab bar if the tabs list is empty.
     else {
+        linearTabs.parentElement.style.display = "none";
         tabs.parentElement.style.display = "none";
     }
 }
@@ -201,6 +211,8 @@ const _loadTransactions = (transactions_list) => {
             if (i + 1 === transactions_list.length) {
                 tr.style.borderBottom = "none";
             }
+
+            tr.setAttribute("data-tooltip", "Click to see more details");
 
             /// Add the [tr] to the [table]
             tbody.append(tr);

@@ -43,6 +43,25 @@
   border: 3px solid var(--cardColor);
 }
 
+[data-tooltip]::before {            
+  position : absolute;
+   content : attr(data-tooltip);
+   opacity : 0;
+   transform: scale(0);
+}
+
+[data-tooltip]:hover:before { 
+  opacity : 1;
+  transform: scale(0.99);     
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  background-color: var(--primaryTextColor);
+  padding: 8px;
+  font-size: 10px;
+  color: var(--cardColor);
+}
+
 .sticky-header { position: sticky; top: 0; width: 100%; position: -webkit-sticky; position: -moz-sticky; position: -ms-sticky; position: -o-sticky; } */
 
 h1,
@@ -472,6 +491,44 @@ footer > a:hover {
   padding: 0 var(--verticalGap);
   width: 100%;
   margin-bottom: var(--horizontalGap);
+  border-bottom: 1px solid var(--dividerColor);
+}
+
+.linear-tabs {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: var(--horizontalGap);
+}
+
+.linear-tabs > li {
+  padding: 10px var(--horizontalGap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: var(--secondaryTextColor);
+}
+
+.linear-tabs > li:hover {
+  background-color: var(--menuItemHoverColor);
+  color: var(--primaryTextColor);
+}
+
+.linear-tabs > .selected-linear-tab {
+  color: var(--primaryTextColor);
+  /* background-color: var(--menuItemHoverColor); */
+}
+
+.linear-tabs > .selected-linear-tab::after {
+  position: absolute;
+  top: 100%;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--primaryColor);
 }
 
 .tabs-list {
@@ -567,6 +624,7 @@ tbody > tr:hover {
   transform: translateY(-50%);
   transform: scale(1.01);
   background-color: var(--cardColor);
+  padding-bottom: calc(var(--horizontalGap) + 8px);
 }
 
 th,
