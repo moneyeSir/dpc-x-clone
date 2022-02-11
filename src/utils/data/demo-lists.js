@@ -225,128 +225,128 @@ export const highlights_list = [
         title: "Payments",
         items: [
             {
-                subtitle: "New Users",
+                subtitle: "Today",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(229, 45, 47, 1)",
+                    backgroundColor: "rgba(229, 45, 47, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
                     icon: "bx:bx-line-chart",
                     percentage: "45%",
-                    text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    text: "VS YESTERDAY",
+                    color: "rgba(2, 189, 52, 1)"
                 }
             },
             {
-                subtitle: "New Users",
+                subtitle: "This Week",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(2, 189, 52, 1)",
+                    backgroundColor: "rgba(2, 189, 52, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
                     icon: "bx:bx-line-chart",
                     percentage: "45%",
-                    text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    text: "VS PREV. 7 DAYS",
+                    color: "rgba(2, 189, 52, 1)"
                 }
             },
             {
-                subtitle: "New Users",
+                subtitle: "This Month",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(35, 143, 236, 1)",
+                    backgroundColor: "rgba(35, 143, 236, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
-                    icon: "bx:bx-line-chart",
+                    icon: "bx:bx-line-chart-down",
                     percentage: "45%",
                     text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    color: "rgba(229, 45, 47, 1)"
                 }
             },
             {
-                subtitle: "New Users",
+                subtitle: "This Year",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(250, 135, 1, 1)",
+                    backgroundColor: "rgba(250, 135, 1, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
                     icon: "bx:bx-line-chart",
                     percentage: "45%",
-                    text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    text: "VS PREV. 12 MONTHS",
+                    color: "rgba(2, 189, 52, 1)"
                 }
             },
         ]
     },
     {
-        title: "Payments",
+        title: "Analytics",
         items: [
             {
-                subtitle: "New Users",
+                subtitle: "Retention",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(138, 44, 222, 1)",
+                    backgroundColor: "rgba(138, 44, 222, 0.2)"
                 },
-                title: "145.9K",
+                title: "90%",
                 summary: {
-                    icon: "bx:bx-line-chart",
+                    icon: "bx:bx-line-chart-down",
                     percentage: "45%",
                     text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    color: "rgba(229, 45, 47, 1)"
                 }
             },
             {
-                subtitle: "New Users",
+                subtitle: "Average Payment",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(185, 146, 4, 1)",
+                    backgroundColor: "rgba(185, 146, 4, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
                     icon: "bx:bx-line-chart",
                     percentage: "45%",
                     text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    color: "rgba(2, 189, 52, 1)"
                 }
             },
             {
-                subtitle: "New Users",
+                subtitle: "MRR",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(252, 121, 2, 1)",
+                    backgroundColor: "rgba(252, 121, 2, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
                     icon: "bx:bx-line-chart",
                     percentage: "45%",
-                    text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    text: "VS PREV. 12 MONTHS",
+                    color: "rgba(2, 189, 52, 1)"
                 }
             },
             {
-                subtitle: "New Users",
+                subtitle: "Gross Volume",
                 avatar: {
                     icon: "bi:person-plus-fill",
-                    color: "rgba(0, 128, 0, 1)",
-                    backgroundColor: "rgba(0, 128, 0, 0.2)"
+                    color: "rgba(6, 100, 73, 1)",
+                    backgroundColor: "rgba(6, 100, 73, 0.2)"
                 },
                 title: "145.9K",
                 summary: {
                     icon: "bx:bx-line-chart",
                     percentage: "45%",
-                    text: "VS PREV. 28 DAYS",
-                    color: "rgba(0, 128, 0, 1)"
+                    text: "VS PREV. 12 MONTHS",
+                    color: "rgba(2, 189, 52, 1)"
                 }
             },
         ]
