@@ -283,6 +283,7 @@ body {
   display: flex;
   gap: 10px;
   background-color: var(--cardColor);
+  cursor: pointer;
 }
 
 .input-search-container i {
@@ -531,6 +532,26 @@ body {
 
   #toggle-menu-icon {
     display: block;
+  }
+
+  .leading-app-bar h2{
+    flex: 1;
+  }
+
+  .leading-app-bar{
+    flex: 1;
+  }
+
+  .input-search-container input{
+    display: none;
+  }
+
+  .input-search-container i {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--borderRadius);
+    background-color: var(--cardColor);
+    border: 1px solid black;
   }
 
 }
