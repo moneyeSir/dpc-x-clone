@@ -411,6 +411,7 @@ body {
 
 .linear-tabs > li {
   padding: 10px var(--horizontalGap);
+  flex-shrink: 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
