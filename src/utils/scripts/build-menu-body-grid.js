@@ -6,7 +6,7 @@ import { buildDashboardView } from './dashboard-script.js';
 const _buildBodyByTpe = (bodyMap, bodyType) => {
     switch (bodyType) {
         case 0:
-            return buildDashboardView();
+            return buildDashboardView(bodyMap);
         case 1:
             return buildTransactionsTable(bodyMap.showTransactions);
         default:
