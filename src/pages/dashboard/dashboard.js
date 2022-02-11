@@ -16,7 +16,7 @@ const dashboardMap = {
         appbarMap: {
             menuIcon: '../../assets/dpc-menu.png',
             title: "Dashboard",
-            searchPlaceholder: "Tap to search DPC-X Services",
+            searchPlaceholder: "Tap to search services",
             showSearchBar: false,
             companiesList: demoLists.companies_list,
             notifications: demoLists.notifications_list,

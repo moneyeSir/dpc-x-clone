@@ -513,6 +513,10 @@ body {
     z-index: 9;
     min-width: 200px;
   }
+
+  .input-search-container input {
+    min-width: 160px;
+  }
 }
 
 /** Resposive Tablet*/
