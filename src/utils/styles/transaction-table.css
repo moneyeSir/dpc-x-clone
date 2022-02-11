@@ -15,10 +15,12 @@
   }
   
   thead {
+    display: block;
+    width: 100%;
     border-bottom: 1px solid var(--primaryTextColor);
   }
   
-  tbody {
+  tfoot, thead, tbody {
     display: block;
     width: 100%;
   }

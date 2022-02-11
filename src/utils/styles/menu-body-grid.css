@@ -247,6 +247,7 @@ body {
 
 .main-section-app-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: var(--horizontalGap);
@@ -257,6 +258,7 @@ body {
 .leading-app-bar,
 .trailing-app-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--horizontalGap);
 }
@@ -298,17 +300,15 @@ body {
   position: relative;
 }
 
-.main-section-notification-icon i > svg {
-  width: 30px;
-  height: 30px;
+.main-section-notification-icon i {
   color: var(--primaryTextColor);
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .main-section-notification-icon p {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -336,7 +336,6 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 100%;
   gap: var(--horizontalGap);
   padding: var(--horizontalGap);
   border-radius: var(--borderRadius);
