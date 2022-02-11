@@ -537,9 +537,8 @@ body {
   }
 }
 
-
-/** Resposive Laptop S*/
-@media screen and (max-width: 1024px) {
+/** Resposive Tablet*/
+@media screen and (max-width: 768px) {
   .body-wrapper {
     grid-template-columns: 1fr;
     grid-template-areas: 'main-content-area';
