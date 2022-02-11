@@ -1,9 +1,0 @@
-
-/** JS Events */
-.open-menu-section-area {
-  opacity: 1;
-  transform: translateX(0);
-  position: absolute;
-  z-index: 10;
-  /* min-width: var(--menuWidth); */
-}
