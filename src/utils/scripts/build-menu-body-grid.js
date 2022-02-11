@@ -2,9 +2,6 @@ import { buildMenuSection } from './menu-section-script.js';
 import { buildMainSectionArea } from './main-section-scrpit.js';
 import { buildTransactionsTable } from './transactions-table-script.js';
 
-import { bodyMap } from '../repository/body-map.js';
-
-
 const _buildBodyByTpe = (bodyMap, bodyType) => {
     switch (bodyType) {
         case 1:
@@ -42,7 +39,7 @@ const _buildFooter = () => {
     return footer;
 }
 
-const buildMenuBodyGrid = () => {
+export const buildMenuBodyGrid = (bodyMap, bodyType) => {
 
     /// Build the body wrapper.
     let bodyWrapper = document.createElement("div");
@@ -52,15 +49,12 @@ const buildMenuBodyGrid = () => {
     let menuSection = buildMenuSection(bodyMap.menuMap);
 
     /// Build the body by the parsed type.
-    let body = _buildBodyByTpe(bodyMap, 1);
+    let body = _buildBodyByTpe(bodyMap, bodyType);
 
     /// Build the main section area.
     let mainSectionArea = buildMainSectionArea(bodyMap.mainSectionMap, body);
 
     /// Add the menu and main section area to the body wrapper.
     bodyWrapper.append(menuSection, mainSectionArea);
-    document.body.append(bodyWrapper, _buildFooter());
+    return [bodyWrapper, _buildFooter()];
 }
-
-/// Make sure to include the [menu-body-grid.css] and [customs.css] files.
-document.addEventListener("DOMContentLoaded", buildMenuBodyGrid);
