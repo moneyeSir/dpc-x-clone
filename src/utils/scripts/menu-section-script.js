@@ -117,6 +117,13 @@ const buildMenuListItems = (menuList, menuItems) => {
         /// Add the icon to the icon div
         icon_div.append(_genrateIcon(menuItems[i].icon));
 
+        /// Add onclick event to the li element.
+        if(menuItems[i].open_url){
+            li.addEventListener("click", () => {
+                window.open(menuItems[i].open_url, "_self");
+            })
+        }
+
         /// Add the [li] to the [ul]
         menuList.appendChild(li);
 
