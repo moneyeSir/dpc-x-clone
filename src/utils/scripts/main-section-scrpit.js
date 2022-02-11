@@ -12,7 +12,13 @@ const _buildMainSectionTabBar = (tabbarMap) => {
     tabBar.setAttribute("id", "linear-tabs");
     mainSectionTabBar.append(tabBar);
 
+    let tabs_visible = tabbarMap.visible;
     let tabs_list = tabbarMap.tabsList;
+
+    if(!tabs_visible && !tabs_list){
+        mainSectionTabBar.style.display = "none";
+        return mainSectionTabBar;
+    }
 
     /// Check if the tabs list is not empty.
     /// If it is not, load the tabs.
@@ -37,7 +43,7 @@ const _buildMainSectionTabBar = (tabbarMap) => {
 
     /// Hide the tab bar if the tabs list is empty.
     else {
-        mainSectionTabBar.parentElement.style.display = "none";
+        mainSectionTabBar.style.display = "none";
     }
 
     return mainSectionTabBar;

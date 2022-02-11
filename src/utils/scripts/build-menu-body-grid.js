@@ -1,9 +1,12 @@
 import { buildMenuSection } from './menu-section-script.js';
 import { buildMainSectionArea } from './main-section-scrpit.js';
 import { buildTransactionsTable } from './transactions-table-script.js';
+import { buildDashboardView } from './dashboard-script.js';
 
 const _buildBodyByTpe = (bodyMap, bodyType) => {
     switch (bodyType) {
+        case 0:
+            return buildDashboardView();
         case 1:
             return buildTransactionsTable(bodyMap.showTransactions);
         default:
