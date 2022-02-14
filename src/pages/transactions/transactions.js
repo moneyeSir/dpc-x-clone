@@ -1,11 +1,11 @@
-import { buildMenuBodyGrid } from '../src/utils/scripts/build-menu-body-grid.js';
-import * as demoLists from '../src/utils/data/demo-lists.js';
+import { buildMenuBodyGrid } from '../../utils/scripts/build-menu-body-grid.js';
+import * as demoLists from '../../utils/data/demo-lists.js';
 
 const transactionsMap = {
     menuMap: {
-        dpcLogo: "../src/assets/dpc-x-black.png",
+        dpcLogo: "../../assets/dpc-x-black.png",
         activeCompany: {
-            companyLogo: "../src/assets/qq.png",
+            companyLogo: "../../assets/qq.png",
             companyName: "Twiga Foods",
             extras: "531923 • Till Number • Basic"
         },
@@ -15,7 +15,7 @@ const transactionsMap = {
     showTransactions: demoLists.transactions_list,
     mainSectionMap: {
         appbarMap: {
-            menuIcon: '../src/assets/dpc-menu.png',
+            menuIcon: '../../assets/dpc-menu.png',
             title: "M-PESA",
             searchPlaceholder: "Tap to search Transactions",
             showSearchBar: false,
