@@ -3,9 +3,9 @@ import * as demoLists from '../../utils/data/demo-lists.js';
 
 const dashboardMap = {
     menuMap: {
-        dpcLogo: "../../assets/dpc-x-black.png",
+        dpcLogo: "../src/assets/dpc-x-black.png",
         activeCompany: {
-            companyLogo: "../../assets/qq.png",
+            companyLogo: "../src/assets/qq.png",
             companyName: "Twiga Foods",
             extras: "531923 • Till Number • Basic"
         },
@@ -14,7 +14,7 @@ const dashboardMap = {
     },
     mainSectionMap: {
         appbarMap: {
-            menuIcon: '../../assets/dpc-menu.png',
+            menuIcon: '../src/assets/dpc-menu.png',
             title: "Dashboard",
             searchPlaceholder: "Tap to search services",
             showSearchBar: false,

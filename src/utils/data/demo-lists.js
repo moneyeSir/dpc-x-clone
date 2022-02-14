@@ -4,7 +4,7 @@ export const menu_items = [
     {
         icon: "bx:bx-bar-chart-alt-2",
         name: "Dashboard",
-        open_url: "../src/pages/dashboard/dashboard.html",
+        open_url: "../../../public/index.html",
         count: 0,
         selected: false,
         type: "service"
