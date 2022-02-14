@@ -14,7 +14,8 @@ export const menu_items = [
         name: "M-Pesa",
         count: 6,
         selected: true,
-        type: "service"
+        type: "service",
+        open_url: "../src/pages/transactions/transactions.html",
     },
     {
         icon: "ic:outline-sms",
